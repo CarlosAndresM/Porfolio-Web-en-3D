@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+/* 
+'Outfit', 'Geist Mono Black' */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Definición de la animación */
+@keyframes arrow-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    /* La flecha está en su posición original */
+    50% {
+        transform: translateY(6px);
+    }
+
+    /* La flecha se desplaza hacia abajo */
+    100% {
+        transform: translateY(0);
+    }
+
+    /* La flecha regresa a su posición original */
+}
+
+/* Aplicación de la animación al SVG con el ID 'arrow-icon' */
+#arrow-icon {
+    animation: arrow-animation 1s infinite;
+    /* Repite la animación de forma infinita */
+
+    color: #273036;
+    margin-bottom: 10px;
+    cursor: pointer; 
+}
+
+.site-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95vh;
+    position: relative; 
+}
+
+.site-content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    padding: 2rem;
+    color: #fff;
+}
+
+.info h1 {
+    font-size: 3.75rem;
+    color: #161b1f;
+    font-family: 'Outfit', sans-serif;
+}
+
+.info p {
+    font-size: 1.25rem;
+    font-family: 'Outfit', sans-serif;
+    color: #888d99;
+    width: 30rem;
+}
+
+.site-content-img {
+    width: 50%;
+    height: 100vh; 
+}
+
+.site-content-img img { 
+    width: 100%;
+    height: 100vh;  
+    padding-top: 30px;
+    object-fit: cover;
+}
+
+.wave {
+    position: absolute;
+    bottom: -170px; 
+    width: 100%;
+    z-index: 1; 
+}
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding-top: 75px;
+    background-color: #273036;
+}
+
+
+.div1 {
+    width: 50%;
+
+}
+
+.textos h2 {
+    font-size: 1.875rem;
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+
+}
+
+.div2 {
+    padding-top: 60px;
+    width: 50%;
+}
+
+
+.divC {
+    display: flex;
+    width: 904px;
+    height: 441px;
+    min-width: 904px;
+    min-height: 441px;
+    padding: 40px 90px;
+
+}
+
+.content-img {
+    background-color: #eaeaea;
+    border-radius: 1rem;
+    height: 261px;
+    width: 441px;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: box-shadow 0.4s; 
+
+}
+
+.img:hover{
+    box-shadow: 4px 4px 4px  4px rgba(0, 0, 0, 0.671);
+}
+
+.content-general {
+    background-color: #fff;
+    border-radius: 1rem;
+    margin-bottom: 10rem;
+    box-shadow: 0px 0px 10px rgba(223, 220, 220, 0.507);
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeInScale 0.6s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    max-width: 80%;
+    max-height: 80%;
+    animation: scaleIn 0.6s forwards;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+.site-footer p{
+    flex-direction: left;
+}
+
+.site-footer{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .site-footer p {
+    margin: 0; 
+    padding-left: 30px;
+}
+
+.card {
+    display: flex;
+    width: fit-content;
+    height: fit-content; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px; 
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: green;
+    transition-duration: 0.3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  } 
+
+
+
+
+  
